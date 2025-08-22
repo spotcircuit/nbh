@@ -218,7 +218,7 @@
   }
 
   .select {
-    @apply input appearance-none bg-[url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m4 6 4 4 4-4'/%3E%3C/svg%3E")] bg-[length:1.5rem] bg-[position:right_0.5rem_center] bg-no-repeat pr-10;
+    @apply input appearance-none pr-10;
   }
 
   .checkbox {

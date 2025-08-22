@@ -53,7 +53,7 @@ export default function StateLocationPage() {
             </Badge>
             <h1 className="heading-2 mb-4">{state.name}</h1>
             <p className="body-large text-neutral-600 dark:text-neutral-400 mb-8">
-              We're excited to announce that Nothing Better Health will be expanding to {state.name} in 2025. 
+              We&apos;re excited to announce that Nothing Better Health will be expanding to {state.name} in 2025. 
               Join our waitlist to be notified when we launch.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -129,10 +129,6 @@ export default function StateLocationPage() {
                 size="xl"
                 variant="accent"
                 leftIcon={<Calendar className="w-5 h-5" />}
-                as="a"
-                href={EXTERNAL_LINKS.bookAppointment}
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 Book {state.shortName} Appointment
               </Button>
@@ -141,8 +137,8 @@ export default function StateLocationPage() {
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-black"
                 leftIcon={<Phone className="w-5 h-5" />}
-                as="a"
-                href="tel:2025550100"
+                
+
               >
                 Call for Info
               </Button>
@@ -213,7 +209,7 @@ export default function StateLocationPage() {
         </div>
       </Section>
 
-      {/* Providers Section */}
+
       <Section>
         <div className="mb-12">
           <h2 className="heading-2 mb-4">
@@ -312,7 +308,7 @@ export default function StateLocationPage() {
             
             <div className="pt-6 border-t border-neutral-200 dark:border-neutral-800">
               <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">
-                Don't see your insurance? We also offer competitive self-pay rates 
+                Don&apos;t see your insurance? We also offer competitive self-pay rates 
                 and can provide superbills for out-of-network reimbursement.
               </p>
               <Button variant="primary">
@@ -339,10 +335,6 @@ export default function StateLocationPage() {
               size="xl"
               variant="primary"
               leftIcon={<Calendar className="w-5 h-5" />}
-              as="a"
-              href={EXTERNAL_LINKS.bookAppointment}
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Schedule Appointment
             </Button>
@@ -350,8 +342,7 @@ export default function StateLocationPage() {
               size="xl"
               variant="outline"
               leftIcon={<Mail className="w-5 h-5" />}
-              as="a"
-              href="/contact"
+              
             >
               Contact Us
             </Button>

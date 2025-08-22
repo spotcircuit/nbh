@@ -46,17 +46,51 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       xl: 'btn-xl',
     }
 
-    const Component = animate ? motion.button : 'button'
-    const animationProps = animate
-      ? {
-          whileHover: { scale: 1.02 },
-          whileTap: { scale: 0.98 },
-          transition: { duration: 0.2 },
-        }
-      : {}
+    // Extract only the props that are safe to pass to motion.button
+    const { 
+      onDrag, 
+      onDragEnd, 
+      onDragStart,
+      onAnimationStart,
+      onAnimationEnd,
+      onAnimationIteration,
+      ...safeProps 
+    } = props
+
+    if (animate) {
+      return (
+        <motion.button
+          ref={ref}
+          className={cn(
+            variants[variant],
+            sizes[size],
+            fullWidth && 'w-full',
+            isLoading && 'opacity-70 cursor-wait',
+            'relative',
+            className
+          )}
+          disabled={disabled || isLoading}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ duration: 0.2 }}
+          {...safeProps}
+        >
+          {isLoading && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+            </div>
+          )}
+          <span className={cn('flex items-center justify-center gap-2', isLoading && 'invisible')}>
+            {leftIcon && <span className="flex-shrink-0">{leftIcon}</span>}
+            {children}
+            {rightIcon && <span className="flex-shrink-0">{rightIcon}</span>}
+          </span>
+        </motion.button>
+      )
+    }
 
     return (
-      <Component
+      <button
         ref={ref}
         className={cn(
           variants[variant],
@@ -67,7 +101,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           className
         )}
         disabled={disabled || isLoading}
-        {...animationProps}
         {...props}
       >
         {isLoading && (
@@ -80,7 +113,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           {children}
           {rightIcon && <span className="flex-shrink-0">{rightIcon}</span>}
         </span>
-      </Component>
+      </button>
     )
   }
 )

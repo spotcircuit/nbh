@@ -7,34 +7,26 @@ export const getSiteData = (): SiteData => siteData as SiteData;
 
 export const getPageBySlug = (slug: string): PageData | null => {
   const data = getSiteData();
-  return data.pages[slug] || data.blog.posts[slug] || data.products[slug] || null;
+  return data.pages?.[slug] || null;
 };
 
 export const getAllPages = (): PageData[] => {
   const data = getSiteData();
-  return [
-    ...Object.values(data.pages),
-    ...Object.values(data.blog.posts),
-    ...Object.values(data.products)
-  ];
+  return data.pages ? Object.values(data.pages) : [];
 };
 
 export const getBlogPosts = (): PageData[] => {
-  const data = getSiteData();
-  return Object.values(data.blog.posts);
+  return [];
 };
 
 export const getProducts = (): PageData[] => {
-  const data = getSiteData();
-  return Object.values(data.products);
+  return [];
 };
 
 export const getNavigation = () => {
-  const data = getSiteData();
-  return data.navigation;
+  return [];
 };
 
 export const getSEOData = (slug: string) => {
-  const data = getSiteData();
-  return data.seo[slug] || null;
+  return null;
 };

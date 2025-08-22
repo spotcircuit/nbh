@@ -229,7 +229,7 @@ export default function LocationsPage() {
                     {state.status === 'coming-soon' && (
                       <CardContent>
                         <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">
-                          We're expanding to {state.name} soon! Join our waitlist to be the first to know when we launch.
+                          We&apos;re expanding to {state.name} soon! Join our waitlist to be the first to know when we launch.
                         </p>
                         <Button variant="outline" fullWidth>
                           Join Waitlist
@@ -283,17 +283,17 @@ export default function LocationsPage() {
       <Section>
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="heading-2 mb-4">
-            Can't Find Your State?
+            Can&apos;t Find Your State?
           </h2>
           <p className="body-large text-neutral-600 dark:text-neutral-400 mb-8">
-            We're actively working to expand our services to more states. 
-            Join our waitlist to be notified when we're available in your area.
+            We&apos;re actively working to expand our services to more states. 
+            Join our waitlist to be notified when we&apos;re available in your area.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="primary">
               Join Expansion Waitlist
             </Button>
-            <Button size="lg" variant="outline" as="a" href="/contact">
+            <Button size="lg" variant="outline">
               Contact Us
             </Button>
           </div>

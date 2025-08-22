@@ -172,10 +172,6 @@ export default function ProvidersPage() {
                         <Button
                           variant="primary"
                           leftIcon={<Calendar className="w-4 h-4" />}
-                          as="a"
-                          href={EXTERNAL_LINKS.bookAppointment}
-                          target="_blank"
-                          rel="noopener noreferrer"
                         >
                           Book with {provider.name.split(' ')[0]}
                         </Button>
@@ -322,18 +318,14 @@ export default function ProvidersPage() {
               size="xl"
               variant="primary"
               leftIcon={<Calendar className="w-5 h-5" />}
-              as="a"
-              href={EXTERNAL_LINKS.bookAppointment}
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Book Appointment
             </Button>
             <Button
               size="xl"
               variant="outline"
-              as="a"
-              href="/contact"
+              
+              
             >
               Have Questions?
             </Button>

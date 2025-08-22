@@ -142,8 +142,7 @@ const Navigation: React.FC = () => {
                 variant="ghost"
                 size="sm"
                 leftIcon={<Phone className="w-4 h-4" />}
-                as="a"
-                href="tel:2025550100"
+                
               >
                 Call Now
               </Button>
@@ -151,10 +150,6 @@ const Navigation: React.FC = () => {
                 variant="primary"
                 size="sm"
                 leftIcon={<Calendar className="w-4 h-4" />}
-                as="a"
-                href={EXTERNAL_LINKS.bookAppointment}
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 Book Appointment
               </Button>
@@ -206,7 +201,7 @@ const Navigation: React.FC = () => {
                                 .map((state) => (
                                   <Link
                                     key={state.id}
-                                    href={`/locations/${state.id}`}
+                                href={`/locations/${state.id}`}
                                     className="block px-4 py-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                                   >
                                     {state.name}
@@ -220,7 +215,7 @@ const Navigation: React.FC = () => {
                       return (
                         <Link
                           key={item.name}
-                          href={item.href}
+                    href={item.href}
                           className={cn(
                             'block px-4 py-2 rounded-lg text-sm font-medium transition-colors',
                             isActive(item.href)
@@ -241,8 +236,7 @@ const Navigation: React.FC = () => {
                     variant="outline"
                     fullWidth
                     leftIcon={<Phone className="w-4 h-4" />}
-                    as="a"
-                    href="tel:2025550100"
+                    
                   >
                     Call Now
                   </Button>
@@ -250,10 +244,6 @@ const Navigation: React.FC = () => {
                     variant="primary"
                     fullWidth
                     leftIcon={<Calendar className="w-4 h-4" />}
-                    as="a"
-                    href={EXTERNAL_LINKS.bookAppointment}
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
                     Book Appointment
                   </Button>

@@ -41,8 +41,7 @@ export default function HomePage() {
                 variant="secondary"
                 size="sm"
                 className="bg-white text-red-600 hover:bg-red-50"
-                as="a"
-                href="tel:988"
+                
               >
                 Call 988 Now
               </Button>
@@ -54,7 +53,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-mesh-bg pt-20">
         {/* Background Pattern */}
-        <div className="absolute inset-0 bg-hero-pattern opacity-5" />
+        <div className="absolute inset-0 opacity-5" />
         
         {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -103,10 +102,6 @@ export default function HomePage() {
                 <Button
                   size="xl"
                   leftIcon={<Calendar className="w-5 h-5" />}
-                  as="a"
-                  href={EXTERNAL_LINKS.bookAppointment}
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Book Appointment
                 </Button>
@@ -114,8 +109,7 @@ export default function HomePage() {
                   variant="outline"
                   size="xl"
                   leftIcon={<Phone className="w-5 h-5" />}
-                  as="a"
-                  href="tel:2025550100"
+                  
                 >
                   Call for Consultation
                 </Button>
@@ -254,7 +248,7 @@ export default function HomePage() {
         <div className="mt-8 p-6 bg-primary-50 dark:bg-primary-950/30 rounded-xl">
           <h3 className="font-semibold mb-2">Expanding Soon</h3>
           <p className="text-neutral-600 dark:text-neutral-400 mb-4">
-            We're working to bring our services to more communities:
+            We&apos;re working to bring our services to more communities:
           </p>
           <div className="flex flex-wrap gap-3">
             {Object.values(STATES)
@@ -388,10 +382,6 @@ export default function HomePage() {
               size="xl"
               variant="accent"
               leftIcon={<Calendar className="w-5 h-5" />}
-              as="a"
-              href={EXTERNAL_LINKS.bookAppointment}
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Schedule Your First Visit
             </Button>
@@ -399,8 +389,7 @@ export default function HomePage() {
               size="xl"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-neutral-900"
-              as="a"
-              href="/faq"
+              
             >
               Have Questions?
             </Button>
