@@ -1,0 +1,39 @@
+{
+  "statistics": {
+    "totalPages": 26,
+    "regularPages": 17,
+    "blogPosts": 1,
+    "products": 0,
+    "totalImages": 32,
+    "forms": 0,
+    "mainMenuItems": 34,
+    "socialLinks": 0
+  },
+  "pages": [
+    "home",
+    "faq",
+    "privacy-policy",
+    "all-locations-and-services",
+    "district-of-columbia",
+    "maryland",
+    "virginia",
+    "about-our-care",
+    "providers",
+    "edstern-pmhnp",
+    "calvin-layne-pmhnp",
+    "koda",
+    "medications-we-rx",
+    "all-resources",
+    "contact-us",
+    "apppointment",
+    "sample-page"
+  ],
+  "blogPosts": [
+    "blog"
+  ],
+  "products": [],
+  "imagesByCategory": {
+    "general": 30,
+    "logos": 2
+  }
+}
